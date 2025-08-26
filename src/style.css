@@ -1,0 +1,65 @@
+:root {
+  --bg: #0b1020;
+  --surface: #121938;
+  --surface-2: #0f1530;
+  --text: #e7e9f1;
+  --muted: #98a2b3;
+  --primary: #7c9cff;
+  --primary-600: #6788ff;
+  --border: #22305d;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: var(--text);
+  background-color: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+
+h1 { font-size: 1.8rem; margin: 0 0 12px; }
+h2 { font-size: 1.4rem; margin: 0 0 8px; }
+p  { color: var(--muted); }
+
+button { border-radius: 8px; border: 1px solid var(--border); padding: 8px 14px; font-size: .95rem; background: var(--surface); color: var(--text); transition: background .2s, border-color .2s; }
+button:hover { background: var(--surface-2); border-color: var(--primary); }
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.card {
+  padding: 2em;
+}
+
+#app { max-width: 1080px; margin: 0 auto; padding: 1rem 1.25rem 2rem; }
+
+/* Inputs */
+input[type="date"], input[type="number"], input[type="text"] { background: var(--surface); border: 1px solid var(--border); color: var(--text); border-radius: 8px; padding: 8px 10px; }
+label { color: var(--muted); }
+
+/* Card */
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 16px; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+
+/* Table */
+table { width: 100%; border-collapse: collapse; }
+thead th { font-weight: 600; color: var(--muted); background: var(--surface-2); }
+th, td { padding: 10px 12px; border-bottom: 1px solid var(--border); }
+tbody tr:hover { background: rgba(255,255,255,.03); }
+
+.nav { background: var(--surface); border-bottom: 1px solid var(--border); border-radius: 12px; margin: 12px 0; padding: 10px; display: flex; gap: 10px; }
+.nav a { color: var(--muted); padding: 6px 10px; border-radius: 8px; }
+.nav a.router-link-active { color: var(--text); background: var(--surface-2); }
