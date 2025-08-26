@@ -1,7 +1,6 @@
 <template>
 	<div class="page">
 		<h1>NBU exchange rates — Today</h1>
-		{{ rates  }}
 		<CurrencyTable :items="store.computedEffectiveRates" @edit="goEdit" />
 	</div>
 </template>
