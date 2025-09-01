@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: lts/*
 
-      - run: npm ci
+      - run: npm i
 
       - name: Update selected lib
         run: |
