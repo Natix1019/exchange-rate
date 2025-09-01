@@ -27,12 +27,7 @@ jobs:
       - name: Update selected lib
         run: |
           PKG="${{ inputs.package }}"
-          VER="${{ inputs.version }}"
-          if [ -n "$VER" ]; then
-            npm i "$PKG@$VER"
-          else
-            npm update "$PKG"
-          fi
+          npm update "$PKG"
           npm ls "$PKG"
 
       - uses: stefanzweifel/git-auto-commit-action@v5
