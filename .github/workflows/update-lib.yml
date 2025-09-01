@@ -4,16 +4,13 @@ on:
   workflow_dispatch:
     inputs:
       package:
-        description: 'Яку бібліотеку оновлювати'
+        description: 'Which library to update'
         required: true
         type: choice
         options:
           - 'eslint'
           - '@eslint/js'
           - 'pinia'
-      version:
-        description: 'Цільова версія (опційно: latest або x.y.z)'
-        required: false
 
 jobs:
   update:
