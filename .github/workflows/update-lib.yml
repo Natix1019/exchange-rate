@@ -11,10 +11,10 @@ on:
           - 'eslint'
           - '@eslint/js'
           - 'pinia'
-      version:
-        description: 'Target version (optional: latest or x.y.z)'
-        required: false
-        type: string
+      # version:
+      #   description: 'Target version (optional: latest or x.y.z)'
+      #   required: false
+      #   type: string
       
 
 jobs:
@@ -32,12 +32,12 @@ jobs:
       - name: Update selected lib
         run: |
           PKG="${{ inputs.package }}"
-          VER="${{ inputs.version }}"
-          if [ -n "$VER" ]; then
-            npm i "$PKG@$VER"
-          else
+          # VER="${{ inputs.version }}"
+          # if [ -n "$VER" ]; then
+          #   npm i "$PKG@$VER"
+          # else
             npm update "$PKG"
-          fi
+          # fi
           npm ls "$PKG"
 
       - uses: stefanzweifel/git-auto-commit-action@v5
